@@ -582,7 +582,7 @@ implements Drawable2D, Scalable, Printable {
 		 viewPanel.add(viewXformLabel, BorderLayout.CENTER);
 		 JButton zoomInButton = new JButton(new ImageIcon
 				 (this.getClass().getResource(
-						 "iconZoomIn.gif")));
+						 "iconZoomIn.gif")));																																			
 		 JButton zoomOutButton = new JButton(new ImageIcon
 				 (this.getClass().getResource(
 						 "iconZoomOut.gif")));

@@ -39,49 +39,49 @@ public class GraphicsToolBar extends JToolBar {
 
     JButton zoomInButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconZoomIn.gif")));
+            "/META-INF/iconZoomIn.gif")));
         JButton zoomOutButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconZoomOut.gif")));
+            "/META-INF/iconZoomOut.gif")));
         JButton panLeftButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconArrowLeft.gif")));
+            "/META-INF/iconArrowLeft.gif")));
         JButton panRightButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconArrowRight.gif")));
+            "/META-INF/iconArrowRight.gif")));
         JButton panUpButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconArrowUp.gif")));
+            "/META-INF/iconArrowUp.gif")));
         JButton panDownButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconArrowDown.gif")));
+            "/META-INF/iconArrowDown.gif")));
         JButton panAllButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconViewAll.gif")));
+            "/META-INF/iconViewAll.gif")));
         JButton rotateCWButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconRotateCW.gif")));
+            "/META-INF/iconRotateCW.gif")));
         JButton rotateCCWButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "iconRotateCCW.gif")));
+            "/META-INF/iconRotateCCW.gif")));
         JButton mirrorVerticalButton = new JButton(new ImageIcon
                 (this.getClass().getResource(
-                "shape_flip_vertical.png")));
+                "/META-INF/shape_flip_vertical.png")));
         JButton mirrorHorizontalButton = new JButton(new ImageIcon
                 (this.getClass().getResource(
-                "shape_flip_horizontal.png")));     
+                "/META-INF/shape_flip_horizontal.png")));     
         JButton saveButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "Save24.gif")));
+            "/META-INF/Save24.gif")));
         JButton printButton = new JButton(new ImageIcon
             (this.getClass().getResource(
-            "Print24.gif")));
+            "/META-INF/Print24.gif")));
         JToggleButton paintStringsButton = new JToggleButton(new ImageIcon
                 (this.getClass().getResource(
-                "text.png")));
+                "/META-INF/text.png")));
         JToggleButton paintImagesButton = new JToggleButton(new ImageIcon
                 (this.getClass().getResource(
-                "picture_add.png")));
+                "/META-INF/picture_add.png")));
 
 
 
@@ -146,7 +146,7 @@ public class GraphicsToolBar extends JToolBar {
 
   public void init () {
     //    new ImageIcon
-    //                            (this.getClass().getResource("iconArrowDown.gif")));
+    //                            (this.getClass().getResource("/META-INF/iconArrowDown.gif")));
 
     zoomInButton.setToolTipText("Zoom In");
     zoomOutButton.setToolTipText("Zoom Out");
