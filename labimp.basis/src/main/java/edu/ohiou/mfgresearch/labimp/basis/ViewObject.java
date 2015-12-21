@@ -85,7 +85,7 @@ public class ViewObject
   static {
     try {
       URL resourcePropertyURL = ViewObject.class.getResource(
-      "implanner.properties");
+      "/META-INF/implanner.properties");
       properties.load(resourcePropertyURL.openStream());
       System.out.println(
       "Properties loaded from ViewObject resource, " + resourcePropertyURL);
