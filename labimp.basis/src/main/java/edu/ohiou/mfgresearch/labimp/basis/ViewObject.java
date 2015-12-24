@@ -139,10 +139,10 @@ public class ViewObject
   }
 
   static {
+
 	  
 	  loadProperties (ViewObject.class, "labimp.basis");
 	  displayProperties();
-
     graphics.configure ();    	
   }
 
