@@ -50,7 +50,7 @@ public class ViewObject
 //    classTree.addPropertyChangeListener(new PropertyChangeListener() );
   }
 /**
- * field for reading various properties from implanner.properties file
+ * field for reading various properties from several properties file
  */
   static protected Properties properties = new Properties();
   
@@ -81,58 +81,68 @@ public class ViewObject
 	  }
 	  return f;
   }
+  
+  public static void loadProperties (Class c, String name) {
+	   try {
+		      URL resourcePropertyURL = c.getResource(
+		      "/META-INF/properties/" + name + ".properties");
+		      properties.load(resourcePropertyURL.openStream());
+		      System.out.println(
+		      "Properties loaded from " + c.getSimpleName() + " resource, " + resourcePropertyURL);
+		    }
+		    catch (Exception ex) {
+		      System.err.println(
+		      "\nProperties "  + name + " not loaded from ViewObject resource file.");
+		    }
+		    try {
+		      File propertyFile = new File(System.getProperty("user.home"),
+		      name + ".properties");
+		      properties.load(new FileInputStream(propertyFile));
+		      System.out.println(
+		      "Properties loaded from user home, file " + propertyFile);
+		    }
+		    catch (Exception ex) {
+		      System.err.println(
+		      "Properties " + name + " not loaded from user home.");
+		    }
+		    try {
+		      File propertyFile = new File(System.getProperty("user.dir"),
+		    		 name +  ".properties");
+		      properties.load(new FileInputStream(propertyFile));
+		      System.out.println(
+		      "Properties loaded from current folder, file " + propertyFile);
+		    }
+		    catch (Exception ex) {
+		      System.err.println(
+		      "\nProperties " + name + " not loaded from current folder.");
+		    }
+  }
+  
+  public static void displayProperties () {
+	    if (properties.getProperty("edu.ohiou.mfgresearch.labimp.basis.ViewObject.addSystem","YES").
+	            equalsIgnoreCase("YES")) {
+	          try {
+	            properties.putAll(System.getProperties());
+	            System.out.println("Properties added from system");
+	          } catch (java.security.AccessControlException ace) {
+	            System.out.println("Properties not added from system, access not granted");		
+	          }
+	        }
+	        if (properties.getProperty(
+	        "edu.ohiou.mfgresearch.labimp.basis.ViewObject.displayProperties", "NO").
+	        equalsIgnoreCase("YES")) {
+	          PropertyTable viewProp = new PropertyTable("ViewObject properties",
+	              properties);
+	          viewProp.display();
+	          System.out.println("Properties shown in table");
+	        }
+  }
 
   static {
-    try {
-      URL resourcePropertyURL = ViewObject.class.getResource(
-      "implanner.properties");
-      properties.load(resourcePropertyURL.openStream());
-      System.out.println(
-      "Properties loaded from ViewObject resource, " + resourcePropertyURL);
-    }
-    catch (Exception ex) {
-      System.err.println(
-      "\nProperties not loaded from ViewObject resource file.");
-    }
-    try {
-      File propertyFile = new File(System.getProperty("user.home"),
-      "implanner.properties");
-      properties.load(new FileInputStream(propertyFile));
-      System.out.println(
-      "Properties loaded from user home, file " + propertyFile);
-    }
-    catch (Exception ex) {
-      System.err.println(
-      "Properties not loaded from user home.");
-    }
-    try {
-      File propertyFile = new File(System.getProperty("user.dir"),
-      "implanner.properties");
-      properties.load(new FileInputStream(propertyFile));
-      System.out.println(
-      "Properties loaded from current folder, file " + propertyFile);
-    }
-    catch (Exception ex) {
-      System.err.println(
-      "\nProperties not loaded from current folder.");
-    }
-    if (properties.getProperty("edu.ohiou.labimp.basis.ViewObject.addSystem","YES").
-        equalsIgnoreCase("YES")) {
-      try {
-        properties.putAll(System.getProperties());
-        System.out.println("Properties added from system");
-      } catch (java.security.AccessControlException ace) {
-        System.out.println("Properties not added from system, access not granted");		
-      }
-    }
-    if (properties.getProperty(
-    "edu.ohiou.labimp.basis.ViewObject.displayProperties", "NO").
-    equalsIgnoreCase("YES")) {
-      PropertyTable viewProp = new PropertyTable("ViewObject properties",
-          properties);
-      viewProp.display();
-      System.out.println("Properties shown in table");
-    }
+	  
+	  loadProperties (ViewObject.class, "labimp.basis");
+	  displayProperties();
+
     graphics.configure ();    	
   }
 
