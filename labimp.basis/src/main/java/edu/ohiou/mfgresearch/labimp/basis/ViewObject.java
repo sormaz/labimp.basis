@@ -676,7 +676,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
   public LinkedList<DrawString> getStringList() {
     LinkedList<DrawString> stringList = new LinkedList<DrawString>();
     try {
-      if (this.getClass() == Class.forName("edu.ohiou.labimp.basis.ViewObject")) {
+      if (this.getClass() == Class.forName("edu.ohiou.mfgresearch.labimp.basis.ViewObject")) {
         stringList.add(new DrawString("Welcome to ViewObject 2D canvas", -1, -1));
         stringList.add (new DrawString ("This string is scalable", -1,1, 1) );
       }
