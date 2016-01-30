@@ -290,7 +290,7 @@ public class ViewObject
       panelLocation = SwingConstants.LEFT;
       try {
         if (this.getClass() ==
-            Class.forName("edu.ohiou.labimp.basis.ViewObject")) {
+            Class.forName("edu.ohiou.mfgresearch.labimp.basis.ViewObject")) {
           panel.add(new JLabel("This is instance of " +
                                this.getClass().toString()), BorderLayout.NORTH);
           JTree tree = new JTree(new DefaultMutableTreeNode (this) );
@@ -579,7 +579,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
   public LinkedList<Shape> getDrawList() {
     LinkedList<Shape> drawList = new LinkedList<Shape>();
     try {
-      if (this.getClass() == Class.forName("edu.ohiou.labimp.basis.ViewObject")) {
+      if (this.getClass() == Class.forName("edu.ohiou.mfgresearch.labimp.basis.ViewObject")) {
 
         Line2D.Double line =
             new Line2D.Double( -3, -3, 2, 2);
