@@ -29,11 +29,11 @@ public class PropertyTable
   Hashtable propertyHashTable = new Hashtable();
   String[] columnNames = {
       "Value"};
-  String[] propertyNames = {
+  public static String[] propertyNames = {
       "negativeTolerance", "positiveTolerance", "roundness",
       "largestToolDiameter",
       "straightness", "parallelism", "truePosition", "surfaceFinish",
-      "perpendicularity"};
+      "perpendicularity", "primaryDatum", "secondaryDatum", "tertiaryDatum"};  //mayur
   String clickMessage = "Select item from the list";
   JComboBox nameColumnComboBox;// = new JComboBox(propertyNames); ;
   ToleranceTableModel toleranceTableModel;
