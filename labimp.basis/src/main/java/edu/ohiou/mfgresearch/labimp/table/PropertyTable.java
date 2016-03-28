@@ -33,7 +33,7 @@ public class PropertyTable
       "negativeTolerance", "positiveTolerance", "roundness",
       "largestToolDiameter",
       "straightness", "parallelism", "truePosition", "surfaceFinish",
-      "perpendicularity"};
+      "perpendicularity", "primaryDatum", "secondaryDatum", "tertiaryDatum"};  //mayur
   String clickMessage = "Select item from the list";
   JComboBox nameColumnComboBox;// = new JComboBox(propertyNames); ;
   ToleranceTableModel toleranceTableModel;
