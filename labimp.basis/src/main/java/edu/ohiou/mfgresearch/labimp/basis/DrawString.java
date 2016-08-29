@@ -58,6 +58,10 @@ public class DrawString extends ViewObject {
   public String getContent () {
     return contentString;
   }
+  
+  public double getSize() {
+	  return size;
+  }
 
   public void init () {
     panel = new JPanel();
