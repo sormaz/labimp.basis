@@ -74,7 +74,7 @@ public class Draw2DApplet extends GUIApplet {
    public Dimension getAppletSize () {
     Dimension targetSize;
     try {
-    targetSize = target.getAppletSize();
+    targetSize = target.geetAppletSize();
     }
     catch (NullPointerException e) {
       targetSize = new Dimension (0,0);

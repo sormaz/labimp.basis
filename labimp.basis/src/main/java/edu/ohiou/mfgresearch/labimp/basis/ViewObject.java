@@ -471,7 +471,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
   /**
    * Returns the size of applet for display
    */
-  public Dimension gettAppletSize() {
+  public Dimension geetAppletSize() {
     try {
       if (canvas == null)
         return panel.getSize();
@@ -496,7 +496,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
    * @param appletClosing the desired behavior when applat frame window is closed
    */
   public void display(String inTitle, int appletClosing) {
-    display(inTitle, this.gettAppletSize(), appletClosing);
+    display(inTitle, this.geetAppletSize(), appletClosing);
   }
 
   /**
@@ -935,7 +935,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
 
     public void toggleVisible() {}
 
-    public Dimension gettAppletSize() {
+    public Dimension geetAppletSize() {
       return new Dimension();
     }
     public String toToolTipString() {

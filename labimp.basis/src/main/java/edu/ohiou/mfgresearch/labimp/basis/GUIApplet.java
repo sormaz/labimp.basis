@@ -330,7 +330,7 @@ public class GUIApplet
    */
   public void display(String inTitle, int appletClosing) {
 
-    display(inTitle, getAppletSize(), appletClosing);
+    display(inTitle, geetAppletSize(), appletClosing);
   }
 
   /**
@@ -368,7 +368,7 @@ public class GUIApplet
    * default title, defualt size and default window closing operation
    */
   public void display() {
-    this.display(toString(), getAppletSize(), JFrame.DISPOSE_ON_CLOSE);
+    this.display(toString(), geetAppletSize(), JFrame.DISPOSE_ON_CLOSE);
   }
 
   /**
@@ -377,7 +377,7 @@ public class GUIApplet
    * @param appletClosing appletClosing operation code
    */
   public void display(int appletClosing) {
-    display(toString(), getAppletSize(), appletClosing);
+    display(toString(), geetAppletSize(), appletClosing);
   }
 
   /**
@@ -420,10 +420,10 @@ public class GUIApplet
     target.settPanel(inPanel);
   }
 
-  public Dimension getAppletSize() {
+  public Dimension geetAppletSize() {
     //  return this.defaultGUIAppletSize;
     if (target != null) {
-      return target.getAppletSize();
+      return target.geetAppletSize();
     }
     else {
       return GUIApplet.defaultGUIAppletSize;

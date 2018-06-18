@@ -38,7 +38,7 @@ public interface Viewable {
   public void display (String inTitle, int inWidth, int inHeight);
   public void display (String inTitle, Dimension inSize, int appletClosing);
   public void toggleVisible ();
-  public Dimension gettAppletSize ();
+  public Dimension geetAppletSize ();
   public Viewable gettGuiObject ();
   public void settGuiObject (Viewable guiObject);
   
