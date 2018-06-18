@@ -606,7 +606,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
   }
 
   public void makeDrawSets() {
-    Color color = this.color;
+	Color color = this.color;
     if (color == null) {
       String propColor = properties.getProperty(this.getClass().getName() +
                                                 ".color", "000000");
