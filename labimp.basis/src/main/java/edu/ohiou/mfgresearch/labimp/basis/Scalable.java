@@ -17,7 +17,7 @@ public interface Scalable {
 	public int getWidth();
 	public int getHeight();
 	public void paint(Graphics g);
-	public Rectangle2D getBoundigBox();
+	public Rectangle2D geetBoundigBox();
 	public void scale (double sx, double sy);
 	
 	public void translate (double tx, double ty);

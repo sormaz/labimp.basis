@@ -29,7 +29,7 @@ public class ToolTipTreeRenderer extends DefaultTreeCellRenderer {
     if (o != null) {
       if (o instanceof Viewable) {
     	  Color color = null;
-          if  ((color = ( (Viewable) o).gettColor()) != null) {
+          if  ((color = ( (Viewable) o).geettColor()) != null) {
               setForeground(color);
           }
         setToolTipText( ( (Viewable) o).toToolTipString());

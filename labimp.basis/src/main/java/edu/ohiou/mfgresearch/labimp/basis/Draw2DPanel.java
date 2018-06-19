@@ -79,7 +79,7 @@ implements Drawable2D, Scalable, Printable {
 	 * Constructor taking DrawWFApplet.
 	 */
 	public Draw2DPanel(Drawable2D inTarget) throws IllegalArgumentException {
-		this(inTarget, (Draw2DApplet) ((Viewable)inTarget).gettApplet(), DEFAULT_TRANSFORM,
+		this(inTarget, (Draw2DApplet) ((Viewable)inTarget).geettApplet(), DEFAULT_TRANSFORM,
 				DEFAULT_SCALE);
 	}
 
@@ -186,7 +186,7 @@ implements Drawable2D, Scalable, Printable {
 		this.needsUpdate = needUpdate;
 	}
 
-	public JPanel gettCanvas() {
+	public JPanel geettCanvas() {
 		return this;
 	}
 
@@ -201,7 +201,7 @@ implements Drawable2D, Scalable, Printable {
 		target = (Drawable2D) inTarget;
 		target.settCanvas(this);
 		if (inTarget instanceof Viewable)
-			applet = (Draw2DApplet) ((Viewable)inTarget).gettApplet();
+			applet = (Draw2DApplet) ((Viewable)inTarget).geettApplet();
 		computeBoundingBox();
 
 	}
@@ -264,18 +264,18 @@ implements Drawable2D, Scalable, Printable {
 		}
 	}
 
-	public LinkedList<Shape> getDrawList() {
+	public LinkedList<Shape> geetDrawList() {
 		if (target != null) {
-			return target.getDrawList();
+			return target.geetDrawList();
 		}
 		else {
 			return new LinkedList<Shape>();
 		}
 	}
 
-	public LinkedList<Shape> getFillList() {
+	public LinkedList<Shape> geetFillList() {
 		if (target != null) {
-			return target.getFillList();
+			return target.geetFillList();
 		}
 		else {
 			return new LinkedList<Shape>();
@@ -323,7 +323,7 @@ implements Drawable2D, Scalable, Printable {
 				 Object o = itr.next();
 				 if (o instanceof Drawable2D) {
 					 Drawable2D selectable = (Drawable2D) o;
-					 this.targetTable.put(selectable.gettPosition(), selectable);
+					 this.targetTable.put(selectable.geettPosition(), selectable);
 				 }
 				 else if (o instanceof Point2D) {
 					 Point2D point = (Point2D) o;
@@ -337,9 +337,9 @@ implements Drawable2D, Scalable, Printable {
 		 return target.giveSelectables();
 
 	 }
-	 public GraphicsConfiguration getGraphicsConfig () {
+	 public GraphicsConfiguration geetGraphicsConfig () {
 		 if (target != null)
-			 return target.getGraphicsConfig();
+			 return target.geetGraphicsConfig();
 		 else {
 			 GraphicsConfiguration gc = new GraphicsConfiguration();
 			 gc.configure();
@@ -350,8 +350,8 @@ implements Drawable2D, Scalable, Printable {
 	 }
 
 
-	 public Point2D gettPosition () {
-		 return target.gettPosition();
+	 public Point2D geettPosition () {
+		 return target.geettPosition();
 	 }
 
 	 public void settPosition (Point2D point) {
@@ -460,9 +460,9 @@ implements Drawable2D, Scalable, Printable {
 
 	 }
 
-	 public LinkedList<DrawString> getStringList() {
+	 public LinkedList<DrawString> geetStringList() {
 		 if (target != null && printText) {
-			 return target.getStringList();
+			 return target.geetStringList();
 		 }
 		 else {
 			 return new LinkedList<DrawString>();
@@ -752,13 +752,13 @@ implements Drawable2D, Scalable, Printable {
 				 }
 
 			 }
-			 g.setStroke(getGraphicsConfig().makeStroke());
+			 g.setStroke(geetGraphicsConfig().makeStroke());
 			 colors = drawMap.keySet();
 			 for (Iterator colorItr = colors.iterator(); colorItr.hasNext();) {
 				 Object o = colorItr.next();
 				 if (o instanceof Color) {
 					 g.setColor((Color) o);
-					 g.setStroke(getGraphicsConfig().makeStroke());
+					 g.setStroke(geetGraphicsConfig().makeStroke());
 				 }
 				 if (o instanceof GraphicsConfiguration) {
 					 GraphicsConfiguration gc = (GraphicsConfiguration) o;
@@ -774,7 +774,7 @@ implements Drawable2D, Scalable, Printable {
 					 }
 				 }
 			 }
-			 LinkedList stringList = getStringList();
+			 LinkedList stringList = geetStringList();
 			 Font f = g.getFont();
 			 int size = f.getSize();
 			 //    if (applet != null) {
@@ -1270,7 +1270,7 @@ implements Drawable2D, Scalable, Printable {
 	 }
 
 
-	 public Rectangle2D getBoundigBox() {
+	 public Rectangle2D geetBoundigBox() {
 
 		 return boundingBox;
 	 }

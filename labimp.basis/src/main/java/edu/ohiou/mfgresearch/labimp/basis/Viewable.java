@@ -19,17 +19,17 @@ public interface Viewable {
 
 
 
-  public JPanel gettPanel();
+  public JPanel geettPanel();
   public int getPanelLocation();
   public int getPanelOrientation();
 //  public void setTarget (Viewable target);
 //  public Viewable getTarget ();
   public void settApplet (GUIApplet applet);
-  public GUIApplet gettApplet ();
+  public GUIApplet geettApplet ();
   public void settPanel (JPanel inPanel);
   public JPanel makePanel ();
   public void addPanel ();
-  public Color gettColor();
+  public Color geettColor();
   public void settColor (Color color);
   public void init();
   public void display ();
@@ -39,7 +39,7 @@ public interface Viewable {
   public void display (String inTitle, Dimension inSize, int appletClosing);
   public void toggleVisible ();
   public Dimension geetAppletSize ();
-  public Viewable gettGuiObject ();
+  public Viewable geettGuiObject ();
   public void settGuiObject (Viewable guiObject);
   
   public String toToolTipString();

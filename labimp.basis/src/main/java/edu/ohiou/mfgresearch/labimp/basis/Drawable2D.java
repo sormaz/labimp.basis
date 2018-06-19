@@ -26,16 +26,16 @@ public interface Drawable2D   {
 	  public static final boolean MODIFY_TARGET = true;
 
   public void settCanvas (Draw2DPanel canvas);
-  public JPanel gettCanvas ();
+  public JPanel geettCanvas ();
 
   public void paintComponent (Graphics g);
   public void paintComponent (Graphics2D g);
-  public GraphicsConfiguration getGraphicsConfig();
+  public GraphicsConfiguration geetGraphicsConfig();
 
   public void makeDrawSets();
-  public LinkedList<Shape> getDrawList();
-  public LinkedList<Shape> getFillList ();
-  public LinkedList<DrawString> getStringList ();
+  public LinkedList<Shape> geetDrawList();
+  public LinkedList<Shape> geetFillList ();
+  public LinkedList<DrawString> geetStringList ();
   /**
    * method that generates a hashmap of images.
    * This method places them into a hashMap of Draw2DPanel. This method 
@@ -49,7 +49,7 @@ public interface Drawable2D   {
   public void removeButtonOptions(int options);
   public void setNeedUpdate (boolean needUpdate);
   public Collection giveSelectables();
-  public Point2D gettPosition();
+  public Point2D geettPosition();
   public void settPosition(Point2D point);
   public String toToolTipString();
 }

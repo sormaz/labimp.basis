@@ -60,7 +60,7 @@ public class ViewObject
 	  return properties;
   }
   
-  static public GraphicsConfiguration getGraphics () {
+  static public GraphicsConfiguration geetGraphics () {
 	  return graphics;
   }
   
@@ -323,7 +323,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
    *
    * @return panel attribute of given object
    */
-  public JPanel gettPanel() {
+  public JPanel geettPanel() {
     return panel;
   }
 
@@ -368,7 +368,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
 
   }
 
-  public Viewable gettTarget() {
+  public Viewable geettTarget() {
     return this;
   }
 
@@ -397,7 +397,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
     guiObject = inGuiObject;
   }
 
-  public Viewable gettGuiObject() {
+  public Viewable geettGuiObject() {
     return guiObject;
   }
 
@@ -413,11 +413,11 @@ ToolTipManager.sharedInstance().registerComponent(tree);
     this.color = color;
   }
 
-  public Color gettColor() {
+  public Color geettColor() {
     return color;
   }
   
-  public GraphicsConfiguration getGraphicsConfig () {
+  public GraphicsConfiguration geetGraphicsConfig () {
 	  return graphics;
 	  
   }
@@ -442,7 +442,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
     canvas = inCanvas;
   }
 
-  public JPanel gettCanvas() {
+  public JPanel geettCanvas() {
 //          ViewObject.doNothing(this, "in getcanvas DrawWFPanel value" + canvas);
 
     return canvas;
@@ -464,7 +464,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
    *
    * @return GUIApplet
    */
-  public GUIApplet gettApplet() {
+  public GUIApplet geettApplet() {
     return applet;
   }
 
@@ -576,7 +576,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
    * This method creates two diagonals in Canvas2D if called from <code>impObject</code>
    * or adds warning label into object's panel if called from any other object
    */
-  public LinkedList<Shape> getDrawList() {
+  public LinkedList<Shape> geetDrawList() {
     LinkedList<Shape> drawList = new LinkedList<Shape>();
     try {
       if (this.getClass() == Class.forName("edu.ohiou.mfgresearch.labimp.basis.ViewObject")) {
@@ -615,11 +615,11 @@ ToolTipManager.sharedInstance().registerComponent(tree);
  
     if (canvas instanceof Draw2DPanel) {
       Draw2DPanel drawPanel = (Draw2DPanel) canvas;
-      drawPanel.addDrawShapes(color, getDrawList());
+      drawPanel.addDrawShapes(color, geetDrawList());
       String propColor = properties.getProperty(this.getClass().getName() +
                                                 ".fillColor", "FFFFFF");
       color = new Color(Integer.parseInt(propColor, 16));
-      drawPanel.addFillShapes(color, getFillList());
+      drawPanel.addFillShapes(color, geetFillList());
     }
 
   }
@@ -634,7 +634,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
     
   }
   
-  public Point2D gettPosition () {
+  public Point2D geettPosition () {
     return new Point2D.Double (0.0, 0.0);
   }
   
@@ -642,7 +642,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
     System.out.println("Setting position to: " + point.toString());
   }
 
-  public LinkedList<Shape> getFillList () {
+  public LinkedList<Shape> geetFillList () {
     LinkedList<Shape> fillShapes = new LinkedList<Shape>();
 //    fillShapes.add (new Rectangle (0,0,10,10));
     return fillShapes;
@@ -673,7 +673,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
     }
   }
 
-  public LinkedList<DrawString> getStringList() {
+  public LinkedList<DrawString> geetStringList() {
     LinkedList<DrawString> stringList = new LinkedList<DrawString>();
     try {
       if (this.getClass() == Class.forName("edu.ohiou.mfgresearch.labimp.basis.ViewObject")) {
@@ -697,7 +697,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
 
   public void repaint() {
     try {
-      ( (JPanel)this.gettCanvas()).repaint();
+      ( (JPanel)this.geettCanvas()).repaint();
     }
     catch (NullPointerException e) {}
     // change
@@ -826,7 +826,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
     /**
      * @todo implement all methods for Viewable interface
      */
-    public JPanel gettPanel() {
+    public JPanel geettPanel() {
       return this;
     }
 
@@ -879,7 +879,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
       ViewObject.guiObject = guiObject;
     }
 
-    public Viewable gettGuiObject() {
+    public Viewable geettGuiObject() {
       return ViewObject.guiObject;
     }
 
@@ -897,12 +897,12 @@ ToolTipManager.sharedInstance().registerComponent(tree);
       applet = inApplet;
     }
 
-    public GUIApplet gettApplet() {
+    public GUIApplet geettApplet() {
       return applet;
     }
 
-    public Color gettColor() {
-      return guiObject.gettColor();
+    public Color geettColor() {
+      return guiObject.geettColor();
     }
     
  
@@ -965,7 +965,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
             hasFocus);
         Object userObject = ( (DefaultMutableTreeNode) value).getUserObject();
         if (userObject instanceof Viewable
-            && (color = ( (Viewable) userObject).gettColor()) != null) {
+            && (color = ( (Viewable) userObject).geettColor()) != null) {
           component.setForeground(color);
 //        JLabel label = new JLabel (userObject.toString());
 //        label.setForeground(color);
@@ -1002,7 +1002,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
           label.setText(value.toString());
         }
         if (value instanceof Viewable
-            && (color = ( (Viewable) value).gettColor()) != null) {
+            && (color = ( (Viewable) value).geettColor()) != null) {
 
           label.setForeground(color);
         }
@@ -1029,7 +1029,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
           label.setText(value.toString());
         }
         if (value instanceof Viewable
-            && (color = ( (Viewable) value).gettColor()) != null) {
+            && (color = ( (Viewable) value).geettColor()) != null) {
 
           label.setForeground(color);
         }

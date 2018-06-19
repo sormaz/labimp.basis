@@ -51,7 +51,7 @@ public class DrawString extends ViewObject {
     this.color = color;
   }
 
-  public Point2D.Float gettPosition () {
+  public Point2D.Float geettPosition () {
     return position;
   }
 
@@ -68,13 +68,13 @@ public class DrawString extends ViewObject {
     panel.add (new JLabel (this.contentString) ) ;
   }
 
-  public LinkedList<DrawString> getStringList () {
+  public LinkedList<DrawString> geetStringList () {
     LinkedList<DrawString> ll = new LinkedList<DrawString>();
     ll.add (this);
     return ll ;
   }
 
-  public LinkedList<Shape> getDrawList () {
+  public LinkedList<Shape> geetDrawList () {
     return new LinkedList<Shape> ();
   }
 

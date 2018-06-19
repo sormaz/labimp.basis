@@ -143,16 +143,16 @@ public class GUIApplet
    * @return viewbale object that has focus
    */
 
-  public Viewable gettGuiObject() {
-    return target.gettGuiObject();
+  public Viewable geettGuiObject() {
+    return target.geettGuiObject();
   }
 
   /**
    * Returns the color of this applet target
    * @return the color of the target
    */
-  public Color gettColor() {
-    return target.gettColor();
+  public Color geettColor() {
+    return target.geettColor();
   }
 
   /**
@@ -168,7 +168,7 @@ public class GUIApplet
    * Implemented to provide Viewable interface requirement
    * @return this
    */
-  public GUIApplet gettApplet() {
+  public GUIApplet geettApplet() {
     return this;
   }
 
@@ -385,8 +385,8 @@ public class GUIApplet
    * Implemented to satisfy requirement from Viewable interface.
    * @return panel of the applet's target
    */
-  public JPanel gettPanel() {
-    return target.gettPanel();
+  public JPanel geettPanel() {
+    return target.geettPanel();
   }
 
   public JPanel makePanel() {
