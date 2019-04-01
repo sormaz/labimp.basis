@@ -29,7 +29,7 @@ public class PropertyTable
   Hashtable propertyHashTable = new Hashtable();
   String[] columnNames = {
       "Value"};
-  public static String[] propertyNames = {
+  public String[] propertyNames = {
       "negativeTolerance", "positiveTolerance", "roundness",
       "largestToolDiameter",
       "straightness", "parallelism", "truePosition", "surfaceFinish",
