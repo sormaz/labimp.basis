@@ -325,4 +325,5 @@ public class PropertyTable
     PropertyTable viewProp = new PropertyTable ("ViewObject properties", properties);
     viewProp.display();
   }
+
 }
