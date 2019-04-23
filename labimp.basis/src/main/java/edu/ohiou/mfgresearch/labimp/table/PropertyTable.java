@@ -1,3 +1,4 @@
+
 package edu.ohiou.mfgresearch.labimp.table;
 
 /**
@@ -29,12 +30,11 @@ public class PropertyTable
   Hashtable propertyHashTable = new Hashtable();
   String[] columnNames = {
       "Value"};
-  public String[] propertyNames;
-//  = {
-//      "negativeTolerance", "positiveTolerance", "roundness",
-//      "largestToolDiameter",
-//      "straightness", "parallelism", "truePosition", "surfaceFinish",
-//      "perpendicularity", "primaryDatum", "secondaryDatum", "tertiaryDatum"};  //mayur
+  public static String[] propertyNames = {
+      "negativeTolerance", "positiveTolerance", "roundness",
+      "largestToolDiameter",
+      "straightness", "parallelism", "truePosition", "surfaceFinish",
+      "perpendicularity", "primaryDatum", "secondaryDatum", "tertiaryDatum"};  //mayur
   String clickMessage = "Select item from the list";
   JComboBox nameColumnComboBox;// = new JComboBox(propertyNames); ;
   ToleranceTableModel toleranceTableModel;
@@ -326,4 +326,5 @@ public class PropertyTable
     PropertyTable viewProp = new PropertyTable ("ViewObject properties", properties);
     viewProp.display();
   }
+
 }
