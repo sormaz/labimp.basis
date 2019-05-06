@@ -375,21 +375,25 @@ ToolTipManager.sharedInstance().registerComponent(tree);
   public void settTarget(Viewable inTarget) {}
   
   public String getProperty (String propertyName) {
-	  return properties.getProperty(this.getClass().getName() 
-			  								+ "." + propertyName, 
-			  						"Property " + propertyName + " is not defined");
+	  return getProperty(this.getClass(), propertyName);
+	  
+//			  						"Property " + propertyName + " is not defined");
   }
   
   public static String getProperty (Object o, String propertyName) {
-	  return properties.getProperty(o.getClass().getName() 
-			  								+ "." + propertyName, 
-			  						"Property " + propertyName + " is not defined");
+	  return getProperty(o.getClass(), propertyName);
+	  
+//			  						"Property " + propertyName + " is not defined");
   }
   
   public static String getProperty (Class c, String propertyName) {
-	  return properties.getProperty(c.getName() 
-			  								+ "." + propertyName, 
-			  						"Property " + propertyName + " is not defined");
+	  String pName = properties.getProperty(c.getName() 
+				+ "." + propertyName);
+	  if (pName == null) {
+		  pName = getProperty(c.getSuperclass(), propertyName);
+	  }
+	  return pName != null ? pName :  
+			  				"Property " + propertyName + " is not defined for class" + c.getSimpleName();
   }
   
 
