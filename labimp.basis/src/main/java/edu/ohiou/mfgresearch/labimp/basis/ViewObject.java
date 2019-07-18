@@ -118,7 +118,7 @@ public class ViewObject
 		    }
   }
   
-  public static void displayProperties () {
+  public static void displayProperties (String title) {
 	    if (properties.getProperty("edu.ohiou.mfgresearch.labimp.basis.ViewObject.addSystem","YES").
 	            equalsIgnoreCase("YES")) {
 	          try {
@@ -133,9 +133,13 @@ public class ViewObject
 	        equalsIgnoreCase("YES")) {
 	          PropertyTable viewProp = new PropertyTable("ViewObject properties",
 	              properties);
-	          viewProp.display();
+	          viewProp.display(title);
 	          System.out.println("Properties shown in table");
 	        }
+  }
+  
+  public static void displayProperties ( ) {
+	  displayProperties ("");
   }
 
   static {
