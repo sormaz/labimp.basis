@@ -332,10 +332,11 @@ ToolTipManager.sharedInstance().registerComponent(tree);
   }
 
   final public JPanel makePanel() {
-    if (panel != null)
-      return panel;
-    else
-      return createPanel();
+//    if (panel != null)
+//      return panel;
+//    else
+//      return createPanel();
+	  return createPanel();
   }
 
   protected JPanel createPanel() {
