@@ -75,9 +75,9 @@ public class PropertyTable
   }
 
   protected JPanel createPanel() {
-    if (panel == null) {
+    
       init();
-    }
+
     return panel;
   }
 
