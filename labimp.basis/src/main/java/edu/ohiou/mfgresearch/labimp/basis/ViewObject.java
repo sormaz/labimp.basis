@@ -662,7 +662,8 @@ ToolTipManager.sharedInstance().registerComponent(tree);
         createImage(ViewObject.class.getResource("ViewObject.gif"));
 //    BufferedImage  imIcon = (BufferedImage) new ImageIcon (
 //        ViewObject.class.getResource("ViewObject.gif")).getImage().getScaledInstance(-1,20,Image.SCALE_SMOOTH);
-     ImageIcon icon2 = new ImageIcon (ViewObject.class.getResource("ViewObject.gif"));
+     Image icon2 = Toolkit.getDefaultToolkit().
+    	        createImage (this.getClass().getResource("/META-INF/resources/ViewObject.png"));
 //     Image  viewim = icon.getImage().getScaledInstance(-1,20,0);
     if (canvas instanceof Draw2DPanel) {
       Draw2DPanel panel2D = (Draw2DPanel) canvas;
@@ -672,11 +673,11 @@ ToolTipManager.sharedInstance().registerComponent(tree);
 //        panel2D.addImage(imIcon, transform);
       }
       else
-        panel2D.addImage(icon, transform);
+        panel2D.addImage(icon2, transform);
         
-      panel2D.addImage(new ImageIcon (
-          ViewObject.class.getResource("branka-AHS-junior.jpg")).getImage().
-          getScaledInstance(-1,100,0), transform);
+//      panel2D.addImage(new ImageIcon (
+//          ViewObject.class.getResource("branka-AHS-junior.jpg")).getImage().
+//          getScaledInstance(-1,100,0), transform);
     
     
     }
