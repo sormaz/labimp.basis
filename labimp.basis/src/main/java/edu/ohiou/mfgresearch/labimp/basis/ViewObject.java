@@ -146,7 +146,7 @@ public class ViewObject
 
 	  
 	  loadProperties (ViewObject.class, "labimp.basis");
-	  displayProperties();
+	  displayProperties("properties from labimp.basis.properties");
     graphics.configure ();    	
   }
 
