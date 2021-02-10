@@ -12,7 +12,7 @@ public class TestViewObject extends ViewObject {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TestViewObject tvo = new TestViewObject();
-		tvo.points.add(new Point2D.Double(0,0));
+		tvo.points.add(new Point2D.Double(1,2));
 		tvo.points.add(new Point2D.Double(0,1));
 		tvo.points.add(new Point2D.Double(1,0));
 		tvo.points.add(new Point2D.Double(1,1));
