@@ -14,9 +14,6 @@ import java.util.*;
 import java.io.*;
 import java.net.URL;
 
-
-
-
 import edu.ohiou.mfgresearch.labimp.table.ClassNameRenderer;
 import edu.ohiou.mfgresearch.labimp.table.PropertyTable;
 
@@ -64,9 +61,10 @@ public class ViewObject
 	  return graphics;
   }
   
-  static public File chooseFile(String fileType, String title) {
-	  String folder = ViewObject.getProperties().getProperty(fileType + "_FOLDER");
-	  JFileChooser chooser = new JFileChooser(folder);    
+  static public File chooseFile(String fileType, String application, String title) {
+	  String folder = ViewObject.getProperties().getProperty(fileType.toUpperCase() + "_FOLDER");
+	  JFileChooser chooser = new JFileChooser(folder);  
+	  chooser.setFileFilter(new IMPFileFilter(fileType.toLowerCase(), application));
 	  File f = null;
 	  try {
 		  chooser.setDialogTitle(title);
@@ -77,6 +75,7 @@ public class ViewObject
 		  }
 	  } catch (HeadlessException e) {
 		  // TODO Auto-generated catch block
+		  System.err.println("------------------Headless exception");
 		  e.printStackTrace();
 	  }
 	  return f;
