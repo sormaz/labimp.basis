@@ -93,7 +93,7 @@ public class GUIApplet
    * @return the value of requested parameter, or defautl value if not found
    */
   public String getParameter(String name, String defaultValue) {
-     return isStandAlone ? System.getProperty(name, defaultValue) :
+     return isStandAlone ? ViewObject.getProperty(this.getClass(), name) :
 	(getParameter(name) != null ? getParameter(name) : defaultValue);
   }
 
