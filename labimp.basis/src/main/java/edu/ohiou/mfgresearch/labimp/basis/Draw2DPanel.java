@@ -697,6 +697,7 @@ implements Drawable2D, Scalable, Printable {
 			 Draw2DCanvasMouseAdapter mouseAdapter = new Draw2DCanvasMouseAdapter(this);
 			 this.addMouseMotionListener(mouseAdapter);
 			 this.addMouseListener(mouseAdapter);
+			 this.addMouseWheelListener(mouseAdapter);
 		 }
 
 		 protected void paintComponent(Graphics g) {
@@ -1036,9 +1037,9 @@ implements Drawable2D, Scalable, Printable {
 
 					double zoomRatio = 1;
 					if (e.getWheelRotation() < 0) {
-						zoomRatio = 1.05;
+						zoomRatio = 1.1;
 					} else {
-						zoomRatio = 0.95;
+						zoomRatio = 0.9;
 					}
 
 					viewTransform.scale(zoomRatio, zoomRatio);
