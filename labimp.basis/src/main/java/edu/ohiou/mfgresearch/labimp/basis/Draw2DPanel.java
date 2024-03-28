@@ -1028,8 +1028,27 @@ implements Drawable2D, Scalable, Printable {
 				 }
 			 }
 		 }
+		 
+			public void mouseWheelMoved(MouseWheelEvent e) {
+				System.out.println("Rolling the mouse ...");
 
-	 }
+				if(e.getScrollType() == MouseWheelEvent.WHEEL_UNIT_SCROLL) {
+
+					double zoomRatio = 1;
+					if (e.getWheelRotation() < 0) {
+						zoomRatio = 1.05;
+					} else {
+						zoomRatio = 0.95;
+					}
+
+					viewTransform.scale(zoomRatio, zoomRatio);
+//					setScale(scale * zoomRatio);
+//					createTargetTable();
+					repaint();
+				}
+			}
+
+	 }  // the end of Draw2DCanvasMouseAdapter class
 
 	 void zoomInButton_actionPerformed(ActionEvent e) {
 		 if (boundingBox != null) {
