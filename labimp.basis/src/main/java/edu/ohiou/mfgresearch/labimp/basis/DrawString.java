@@ -21,6 +21,10 @@ public class DrawString extends ViewObject {
   String contentString;
   Point2D.Float position;
   double size;
+  
+  public DrawString() {
+	  this ("Empty String", new Point2D.Float(0,0) , 5.0);
+  }
 
   public DrawString(String content, float xPos, float yPos) {
     this (content, new Point2D.Float (xPos, yPos), Double.NaN, Color.blue);
