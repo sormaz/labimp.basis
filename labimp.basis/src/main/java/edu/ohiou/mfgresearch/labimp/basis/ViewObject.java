@@ -690,7 +690,7 @@ ToolTipManager.sharedInstance().registerComponent(tree);
         stringList.add (new DrawString ("This string is scalable", -1,1, 1) );
       }
       else {
-        System.out.println("Method getStringList() should be implemented in " +
+        System.out.println("Method geetStringList() should be implemented in " +
                            this.getClass().toString());
         stringList.add(new DrawString(toString(), 0, 0));
       }
