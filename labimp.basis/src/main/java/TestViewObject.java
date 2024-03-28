@@ -20,6 +20,10 @@ public class TestViewObject extends ViewObject {
 		tvo.display("Show test");
 	}
 	
+	public LinkedList giveSelectables() {
+		return points;
+	}
+	
 	public LinkedList geetDrawList () {
 		Path2D fillShape;
 
