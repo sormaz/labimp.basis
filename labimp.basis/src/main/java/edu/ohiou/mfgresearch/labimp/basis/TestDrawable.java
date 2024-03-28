@@ -1,5 +1,7 @@
 package edu.ohiou.mfgresearch.labimp.basis;
 
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Shape;
@@ -9,7 +11,7 @@ import java.util.LinkedList;
 
 import javax.swing.JPanel;
 
-public class TestDrawable implements Drawable2D {
+public class TestDrawable implements Drawable2D, Viewable {
 
 	public void settCanvas(Draw2DPanel canvas) {
 		// TODO Auto-generated method stub
@@ -103,7 +105,102 @@ public class TestDrawable implements Drawable2D {
 		td.display("Show test");
 	}
 
-	private void display(String string) {
+	public JPanel geettPanel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int getPanelLocation() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getPanelOrientation() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void settApplet(GUIApplet applet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public GUIApplet geettApplet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void settPanel(JPanel inPanel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public JPanel makePanel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void addPanel() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Color geettColor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void settColor(Color color) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void display(String inTitle) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void display(String inTitle, Dimension inSize) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void display(String inTitle, int inWidth, int inHeight) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void display(String inTitle, Dimension inSize, int appletClosing) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void toggleVisible() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Dimension geetAppletSize() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Viewable geettGuiObject() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void settGuiObject(Viewable guiObject) {
 		// TODO Auto-generated method stub
 		
 	}
