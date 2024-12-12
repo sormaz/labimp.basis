@@ -1,6 +1,8 @@
+import java.awt.Color;
 import java.awt.Shape;
 import java.awt.geom.Path2D;
 import java.awt.geom.Point2D;
+import java.util.Collection;
 import java.util.LinkedList;
 
 import edu.ohiou.mfgresearch.labimp.basis.Draw2DApplet;
@@ -15,15 +17,16 @@ public class TestViewObject extends ViewObject {
 		tvo.points.add(new Point2D.Double(1,2));
 		tvo.points.add(new Point2D.Double(0,1));
 		tvo.points.add(new Point2D.Double(1,0));
-		tvo.points.add(new Point2D.Double(1,1));
+
+		tvo.settColor(Color.GREEN);
 		Draw2DApplet d2a = new Draw2DApplet (tvo);
 		tvo.display("Show test");
 	}
-	
-	public LinkedList giveSelectables() {
-		return points;
-	}
-	
+	public Collection giveSelectables () {
+	    
+	    return points;
+	    
+	  }
 	public LinkedList geetDrawList () {
 		Path2D fillShape;
 
