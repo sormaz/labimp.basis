@@ -230,10 +230,10 @@ public class RectangularTableModel
     return this.generator;
   }
 
-  public void display () {
+  public void display (String title) {
     ModelTable  table = new ModelTable(this);
 
-    table.display();
+    table.display(title);
   }
 
   public static void main(String[] args) {
@@ -253,6 +253,11 @@ public class RectangularTableModel
     JDialog d = table.createDialog(true);
     d.setVisible(true);
   }
+
+public void display() {
+	// TODO Auto-generated method stub
+	throw new UnsupportedOperationException ("this method is obsolete, use display (title) ");
+}
 }
 
 class TableListener
