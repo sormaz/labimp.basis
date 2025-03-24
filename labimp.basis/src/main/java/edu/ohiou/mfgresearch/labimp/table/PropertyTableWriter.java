@@ -29,7 +29,7 @@ public class PropertyTableWriter extends ImpXmlWriter {
       String key = (String)itr.next();
 //      System.out.println("the key value is "+key);
 //      double value = ((Double)table.get(key)).doubleValue();
-      buffer.append("<Parameter "+key+"=\""+table.get(key)+"\"/>\n");
+      buffer.append(tab).append("<Parameter "+key+"=\""+table.get(key)+"\"/>\n");
 //      System.out.println("the buffer "+buffer.toString());
     }
 
