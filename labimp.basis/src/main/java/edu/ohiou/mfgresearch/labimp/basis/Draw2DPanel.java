@@ -1031,7 +1031,7 @@ implements Drawable2D, Scalable, Printable {
 		 }
 		 
 			public void mouseWheelMoved(MouseWheelEvent e) {
-				System.out.println("Rolling the mouse ...");
+//				System.out.println("Rolling the mouse ...");
 
 				if(e.getScrollType() == MouseWheelEvent.WHEEL_UNIT_SCROLL) {
 
